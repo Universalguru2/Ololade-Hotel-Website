@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Ololade Hotel, Abuja's premier hotel for luxury and comfort">
+  <meta name="keywords" content="Ololade Hotel, luxury hotel, Abuja hotel, accommodation">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Ololade Hotel | Welcome</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo"><a href="ololade hotel.html">OHT</a></h1>
+        <ul>
+          <li><a class="current" href="ololade hotel.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <div id="showcase">
+      <div class="container">
+        <div class="showcase-content">
+          <h1>Experience <span class="text-primary">Luxury</span> at Ololade Hotel</h1>
+          <p class="lead">Ololade Hotel offers modern accommodations, fine dining, and unparalleled service in the heart of Abuja.</p>
+          <a class="btn" href="about.html">Discover More</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- History Section -->
+  <section id="home-info" class="bg-dark">
+    <div class="info-img"></div>
+    <div class="info-content">
+      <h2>The <span class="text-primary">Legacy</span> of Ololade Hotel</h2>
+      <p>Founded in 2015, Ololade Hotel has grown into one of Abuja's most prestigious hotels. Our mission is to provide a luxurious, comfortable, and memorable stay for every guest. From elegant rooms to world-class amenities, every detail is designed with your comfort in mind.</p>
+      <a href="about.html" class="btn btn-light">Read More</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="box bg-light">
+      <i class="fas fa-map-marker-alt fa-3x"></i>
+      <h3>Prime Location</h3>
+      <p>Located in the heart of Abuja, we are close to major business hubs, shopping areas, and cultural landmarks.</p>
+    </div>
+    <div class="box bg-primary">
+      <i class="fas fa-utensils fa-3x"></i>
+      <h3>Fine Dining</h3>
+      <p>Our on-site restaurant offers gourmet meals and international cuisine prepared by top chefs.</p>
+    </div>
+    <div class="box bg-light">
+      <i class="fas fa-dumbbell fa-3x"></i>
+      <h3>Wellness & Fitness</h3>
+      <p>Stay active with our fully equipped fitness center, relaxing spa, and rejuvenating wellness programs.</p>
+    </div>
+  </section>
+
+  <footer id="main-footer">
+    <p>Ololade Hotel &copy; 2026, All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Prevent direct access without login
+    const storedUser = JSON.parse(localStorage.getItem("lampUser"));
+    if(!storedUser){
+      alert("You must login first!");
+      window.location.href = "lamp.html";
+    }
+  </script>
+</body>
+</html>

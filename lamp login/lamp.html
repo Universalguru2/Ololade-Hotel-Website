@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamp Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="lamp-side">
+      <div class="lamp-container" id="lampContainer">
+        <div class="lamp-shade"></div>
+        <div class="lamp-pole"></div>
+        <div class="lamp-base"></div>
+
+        <div class="pull-rope" id="pullRope"></div>
+        <div class="rope-handle" id="ropeHandle"></div>
+      </div>
+    </div>
+
+    <div class="login-side">
+      <div class="login-form" id="loginForm">
+        <h2>WELCOME</h2>
+        <input type="text" id="loginUsername" placeholder="username">
+        <input type="password" id="loginPassword" placeholder="password">
+          <button class="signin-button" id="loginBtn" disabled>Sign in</button>
+        <p class="signup-text">
+          Don't have an account ?
+          <a href="signup.html">Sign up</a>
+        </p>
+      </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
