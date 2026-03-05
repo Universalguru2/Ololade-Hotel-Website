@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+.signup-card {
+  background: #252525cc;
+  padding: 30px 25px;
+  border-radius: 25px;
+  width: 300px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  position: relative;
+}
+.signup-card h2 {
+  color: #ffd966;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.signup-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background: #1b1b1b;
+  color: white;
+  outline: none;
+}
+.signup-card input::placeholder { color: #888; }
+.signup-card button {
+  width: 100%;
+  padding: 12px;
+  background: #f01e6b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #a01048;
+  transition: 0.1s;
+}
+.signup-card button:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #a01048;
+}
+.signup-card .login-link {
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 15px;
+}
+.signup-card .login-link a {
+  color: #f01e6b;
+  font-weight: 600;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<div class="signup-card">
+  <h2>Create Account</h2>
+  <input type="text" id="newUsername" placeholder="Username">
+  <input type="email" id="newEmail" placeholder="Email">
+  <input type="password" id="newPassword" placeholder="Password">
+  <input type="password" id="confirmPassword" placeholder="Confirm Password">
+  <button id="signupBtn">Sign Up</button>
+  <p class="login-link">Already have an account? <a href="lamp.html">Login</a></p>
+</div>
+
+<script>
+// Save user to LocalStorage
+const signupBtn = document.getElementById("signupBtn");
+signupBtn.addEventListener("click", function(){
+  const username = document.getElementById("newUsername").value.trim();
+  const email = document.getElementById("newEmail").value.trim();
+  const password = document.getElementById("newPassword").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+
+  if(!username || !email || !password){
+    alert("Please fill all fields");
+    return;
+  }
+  if(password !== confirmPassword){
+    alert("Passwords do not match");
+    return;
+  }
+
+  const user = { username, email, password };
+  localStorage.setItem("lampUser", JSON.stringify(user));
+
+  alert("Account created successfully!");
+  window.location.href = "Ololade hotel/ololade hotel.html";
+});
+</script>
+
+</body>
+</html>
